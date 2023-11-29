@@ -2,6 +2,10 @@ import cloudflare from '@astrojs/cloudflare';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
+	devToolbar: {
+		enabled: true,
+		defaultState: 'expanded'
+	},
 	adapter: cloudflare({
 		runtime: {
 			mode: 'local',
@@ -21,6 +25,12 @@ export default defineConfig({
 					type: "d1",
 				},
 				"D1_PROD": {
+					type: "d1",
+				},
+				"USER_DATABASE": {
+					type: "d1",
+				},
+				"PRODUCT_DATABASE": {
 					type: "d1",
 				},
 				"R2": {
